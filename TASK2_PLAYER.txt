@@ -1,0 +1,31 @@
+class Player{
+    constructor (PlayerID, PlayerName, PlayerRuns, PlayerDateofBirth, PlayerShirtNumber) 
+    {
+        this.PlayerID = PlayerID;
+        this.PlayerName = PlayerName;
+        this.PlayerRuns = PlayerRuns;
+        this.PlayerDateofBirth = PlayerDateofBirth;
+        this.PlayerShirtNumber = PlayerShirtNumber;
+    }
+    DisplayInfo() {
+        console.log("The Player ID is: " + this.PlayerID);
+        console.log("The Player Name is: " + this.PlayerName);
+        console.log("The Player Runs are: " + this.PlayerRuns);
+        console.log("The Player DOB is: " + this.PlayerDateofBirth);
+        console.log("The Player Shirt Number is: " + this.PlayerShirtNumber);
+    };
+     GetRuns(){
+        console.log(this.PlayerRuns);
+    };
+    AddRuns(val){
+        this.PlayerRuns += val;
+    };
+}
+let player = new Player(1, 'Rehan Chaudhry', 100, '12/12/12', 10);
+player.DisplayInfo();
+console.log('Players Runs are');
+player.GetRuns();
+console.log('After Adding Runs');
+player.AddRuns(50);
+player.DisplayInfo();
+

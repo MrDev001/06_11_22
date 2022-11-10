@@ -1,0 +1,18 @@
+class Shape {
+  constructor(name, sides, sideLength) {
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength; 
+  }
+    
+  calcPerimeter() {
+      return (this.sides * this.sideLength);
+  }
+}
+const square = new Shape('Square', 4, 5);
+const triangle = new Shape('Triangle', 3, 3);
+console.log("The Perimeter of Square is");
+console.log(square.calcPerimeter());
+console.log("The Perimeter of Triangle is");
+console.log(triangle.calcPerimeter());
+
