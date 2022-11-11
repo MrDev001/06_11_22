@@ -1,0 +1,72 @@
+class Account {
+    #accountId;
+    #accountTitle;
+    #balance;
+    #emailID;
+   constructor(accountId , accountTitle, balance, emailID){
+    this.#accountId = accountId;
+    this.#accountTitle = accountTitle;
+    this.#balance = balance;
+    this.#emailID = emailID;
+   }
+
+   get getID(){
+    return this.#accountId;
+   }
+
+   setID(ID){
+    return this.#accountId = ID;
+   }
+
+   get getTitle(){
+    return this.#accountTitle;
+   }
+
+   setTitle(title){
+    return this.#accountTitle = title; 
+   }
+
+   get getBalance(){
+    return this.#balance;
+   }
+
+   setBalance(bAmount){
+    return this.#balance -= bAmount;
+   }
+
+   addSetBalance(addAmount){
+    return this.#balance += addAmount;
+   }
+
+   get getEmailID(){
+    return this.#emailID;
+   }
+
+   setEmailID(mail){
+    return this.#emailID = mail;
+   }
+
+   withdrawAmount = (amount) =>{
+    let amountCheck = this.getBalance;
+    if (amount<=amountCheck){
+    console.log('Your withdraw Amount is ' + amount); 
+    this.setBalance(2500);
+    console.log('Your remaining Blance is : ' + this.getBalance);
+    } else {
+        console.log('Your Account Balnce is not sufficient for this request.');
+    }
+   };
+   depositAmount(dAmount){
+    console.log('Your deposit amount is '+ dAmount);
+    this.addSetBalance(dAmount);
+    console.log('Your current balance is '+ this.getBalance);
+    
+   }
+}
+const newAccount = new Account (252, 'Rehan Chaudhry', 50000, 'r40rehan@gmail.com');
+console.log('Your Account Balance is :' + newAccount.getBalance);
+console.log('Your request withdrwal amount is 2500 ');
+newAccount.withdrawAmount(2500);
+newAccount.depositAmount(5000);
+
+
